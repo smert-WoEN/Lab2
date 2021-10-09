@@ -1,7 +1,10 @@
 import ru.ifmo.se.pokemon.Battle;
+import java.io.PrintStream;
 
 public class Main {
     public static void main(String[] args) {
+        PrintStream out = new Analyze(System.out);
+        System.setOut(out);
         Battle b = new Battle();
         b.addAlly(new Maractus("A", 10));
         b.addAlly(new Luxray("B", 10));
